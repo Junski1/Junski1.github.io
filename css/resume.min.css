@@ -10,9 +10,9 @@
  }
 
 .row > .column {
-  max-height: 200px;
-  border-radius: 5px 5px 25px 25px;
-  border-width: 2px 2px 20px 2px;
+  height: 200px;
+  border-radius: 5px 5px 10px 10px;
+  border-width: 5px 5px 20px 5px;
   border-style:solid;
   border-color: #00AB7D;
 }
@@ -23,7 +23,7 @@
 
 /* Create four equal columns that floats next to eachother */
 .column {
-  padding: 5px;
+  margin: 5px;
 }
 
 /* The Modal (background) */
