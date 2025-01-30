@@ -15,9 +15,8 @@
   {
     height: 200px;
   }
-  border-radius: 25px;
-  background: #00AB7D;
-  padding: 20px;
+  border-radius: 5px 5px 25px 25px;
+  border: 2px 2px 20px 2px solid #00AB7D;
 }
 
 .row:after {
