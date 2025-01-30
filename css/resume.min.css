@@ -16,7 +16,9 @@
     height: 200px;
   }
   border-radius: 5px 5px 25px 25px;
-  border: 2px 2px 20px 2px solid #00AB7D;
+  border-width: 2px 2px 20px 2px;
+  border-style:solid;
+  border-color: #00AB7D;
 }
 
 .row:after {
