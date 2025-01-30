@@ -10,10 +10,7 @@
  }
 
 .row > .column {
-  img
-  {
-    height: 200px;
-  }
+  max-height: 200px;
   border-radius: 5px 5px 25px 25px;
   border-width: 2px 2px 20px 2px;
   border-style:solid;
