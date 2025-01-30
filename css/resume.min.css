@@ -8,7 +8,7 @@
     display: flex;
     flex-wrap: wrap;
  }
- 
+
 .row > .column {
   padding: 5px;
   height: 200px;
@@ -126,6 +126,10 @@
   color: white;
 }
 
+.modal-row{
+  display: flex;
+  flex-wrap: wrap;
+}
 .modal-row:after {
   content: "";
   display: table;
