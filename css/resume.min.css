@@ -17,7 +17,8 @@
 
 /* Create four equal columns that floats next to eachother */
 .column {
-  float: left;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 /* The Modal (background) */
