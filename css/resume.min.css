@@ -85,7 +85,7 @@
 /* Hide the slides by default */
 .mySlides {
   display: none;
-  height: 80  %;
+  height: 80%;
   width: 100%;
   background-color: #343a40;
   justify-content: center;
