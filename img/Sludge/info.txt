@@ -1,1 +1,1 @@
-{"txt": "Mobile Endless Runner made with Unity and C#./Published to Google Play./School project made in groups of 2-3./You fly as a duck trying to eat on prawns while avoiding fish jumping out of the water and hawks that try to catch you."}
+{"txt": "Mobile multiplayer game made with Unity and C#.;Published to Google Play.;Was working with this project as an intern.;You jump around trying to land on other players.;There are power-ups and downs that can be collected.;My job was to refactor movement to be run on server to prevent cheating and making the power-up system."}
