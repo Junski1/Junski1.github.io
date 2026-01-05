@@ -3,10 +3,6 @@
   flex-wrap: wrap;
 }
 
-#featured>.project-link>img{
-  max-height: fit-content;
-}
-
 .project{
     border-radius: .5rem .5rem 1.5rem 1.5rem;
     border-width: 0.4rem;
@@ -31,6 +27,10 @@
     max-height: 13rem;
     border-radius: .4rem;
   }
+
+  #featured>.project-link>img{
+  max-height: fit-content;
+}
 
   .project-info{
     justify-content: space-evenly;
