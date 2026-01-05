@@ -28,7 +28,7 @@
     border-radius: .4rem;
   }
 
-  #featured>.project-link>img{
+  #featured .project-link>img{
   max-height: fit-content;
 }
 
