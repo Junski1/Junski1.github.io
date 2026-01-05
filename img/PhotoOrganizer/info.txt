@@ -1,1 +1,0 @@
-{"txt": "A personal WPF project.;Finds all images and videos with selected extension under a folder.;Sorts them under folder acording to their metadata (year => dd-mm).;Files can be renamed if wanted."}

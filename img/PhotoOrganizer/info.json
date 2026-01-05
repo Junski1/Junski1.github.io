@@ -1,0 +1,9 @@
+{
+    "imgs": 
+        [
+            {"src":"start.JPG", "alt": "Home screen"},
+            {"src":"SearchPath.JPG", "alt": "Search path"},
+            {"src":"ProcessDone.JPG", "alt": "Process done"}
+
+	]
+}

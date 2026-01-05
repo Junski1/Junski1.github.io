@@ -1,0 +1,90 @@
+<!doctype html><!-- kerrotaan selaimelle dokumenttityyppi-->
+<html  lang="en"><!--tämän sisällä trakennetaan koko sivu-->
+    <head><!-- tässä kerrotaan selaimelle kakki taustatiedot-->
+        <meta charset="utf-8">
+        <meta name="description" content="A project">
+        <meta name="keywords" content="CV, portfolio">
+        <meta name="author" content="Oskar Junnola">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="../css/styles.css" rel="stylesheet">
+        <link href="../css/project_styles.css" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+        <script src="../js/ExpandMenu.js"></script>
+        <script src="../js/ModalScripts.js"></script>
+        <title>Photo Organizer</title>
+    </head>
+    <body onload="CheckForMobile(), CreateModal('../img/PhotoOrganizer/', 'info.json')">
+        <div id="PageWrapper">
+
+            <nav id="navbar">
+                <div id="navbar-content" class="flex column">
+                    <div id="profile">
+                        <img id="img-profile" class="non-mobile mb1" src="../img/profile.jpg" alt="profile picture">
+                        <h2 id="navname" class="mb1">Oskar Junnola</h2>
+                        <a class="mobile icon" onclick="ExpandMenu()"><i class="fa fa-bars"></i></a>
+                    </div>
+                    <div id="expand">
+                        <div class="navbar-nav flex column">
+                            <a class="nav-link mb1" href="../index.html">Home</a>
+                            <a class="nav-link mb2" href="../projects.html" title="Go to projects page">Projects</a>
+                        </div>
+                        <hr class="nav-devider mb2">
+                        <div class="navbar-nav flex column">
+                            <a class="nav-link mb2" href="#PageWrapper">To the top</a>
+                        </div>
+
+                        
+                    </div>
+
+                    <div id="nav-contacts" class="non-mobile flex column">
+                        <a href="mailto:oskarjunnola@gmail.com">oskarjunnola@gmail.com</a>
+                        <a href="tel:+358443488622">+(358) 44 3488 622</a>
+                        <div class="contact-icons flex flex-center">
+                            <a href="https://www.linkedin.com/in/oskarjunnola" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="https://github.com/Junski1/Git_Portfolio" target="_blank"><i class="fa-brands fa-github"></i></a>
+                            <a href="https://junsk1.itch.io" target="_blank"><i class="fa-brands fa-itch-io"></i></a>
+                        </div> 
+                    </div>
+                </div>
+            </nav>
+            <div id="content">
+                <div id="info-box" class="flex column">
+                    <div class ="flex mb1">
+                        <h3>Name:</h3> <h3>Photo Organizer</h3>
+                    </div>
+                    <div class ="flex mb1">
+                        <h3>Type:</h3> <h3>Personal WPF</h3>
+                    </div>
+                    <div class ="flex mb1">
+                        <h3>Members:</h3> <h3>Oskar Junnola</h3>
+                    </div>
+                    <div class ="flex mb1">
+                        <h3>Timeframe:</h3> <h3>4 months</h3>
+                    </div>
+                    <div class ="flex">
+                        <h3>Role:</h3> <h3>Programmer</h3>
+                    </div>
+                </div>
+                <section>
+                    <div>
+                        <h1 class="header mb3">Photo Organizer</h1>
+                        <h1 class="subheading mb1">Information</h1>
+                        <p class="para mb3">
+                            A personal WPF project. Made to sort images and videos in a folder based on its metadata (creation time). 
+                            The program uses parallel and async processes to work faster. 
+                            worked as a presonal practice project on parallel and async processses in C#
+                        </p>    
+                    </div>
+                    <!--The image gallery is created here via a JavaScript script-->
+                    <div id="slides-container">
+                    </div>
+                    <p id="reference">Icons from <a href="https://fontawesome.com/">Font Awesome</a></p>
+                </section>
+            
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,156 @@
+#content{
+    margin-right: 20vw;
+}
+
+
+#content section{
+    min-height: auto;
+}
+
+#info-box{
+    position: fixed;
+    background-color: #00AB7D;
+    width: 18vw;
+    border: .5rem solid #00573F;
+    border-radius: 1rem;
+    top: 3rem;
+    right: 0.5vw;
+    padding: 0.5rem;
+}
+
+#info-box a{
+    color: #212529;
+}
+
+#info-box a:hover{
+    color: #f2f2f2;
+}
+
+#info-box div{
+    justify-content: space-between;
+}
+
+#info-box div h3{
+margin-right: 1rem;
+}
+  
+  /* Position the image container (needed to position the left and right arrows) */
+  #slides-container{
+    position: relative;
+    background-color: #212529;
+  }
+  .para_img {
+    width: 75%;
+    border: .25rem solid #00AB7D;
+    border-radius: 1rem;
+  }
+  
+  /* Hide the images by default */
+  .slides {
+    display: none;
+  }
+
+  .slides img, .slides iframe{
+    vertical-align: bottom;
+    width: 100%;
+    border: none;
+  }
+  
+  /* Add a pointer when hovering over the thumbnail images */
+  .cursor {
+    cursor: pointer;
+  }
+  
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    width: auto;
+    padding: 1rem;
+    color: #f2f2f2;
+    font-weight: bold;
+    font-size: 1.25rem;
+    border-radius: 0 1rem 1rem 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 1rem 0 0 1rem;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Number text (1/3 etc) */
+  .numtext {
+    position: absolute;
+    top: 0;
+    color: #f2f2f2;
+    font-size: 1rem;
+    padding: .5rem .75rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 0 0 .5rem 0;
+
+  }
+  
+  /* Container for image text */
+  .caption-container {
+    text-align: center;
+    background-color: #00AB7D;
+    padding: 0.5rem 1rem;
+    color: #212529;
+    font-weight: bold;
+  }
+
+  .slides-row{
+    flex-wrap: wrap;
+  }
+  
+  /* Add a transparency effect for thumnbail images */
+  .slides-demo {
+    opacity: 0.6;
+    height: 5rem;
+  }
+  
+  .active,
+  .slides-demo:hover {
+    opacity: 1;
+  }
+
+@media only screen and (max-width: 800px){
+    #content {
+        margin-right: 0;
+    }
+    #info-box {
+        width: 90vw;
+        position: static;
+        right:auto;
+    }
+    
+    .para_img {
+        width: 100%;
+    }
+
+    .prev,
+  .next {
+    padding: .5rem;
+    border-radius: 0 .5rem .5rem 0;
+  }
+  .next {
+    right: 0;
+    border-radius: .5rem 0 0 .5rem;
+  }
+}
+
+  @media only screen and (min-width: 1920px){
+    #content section{
+      margin-right: 0;
+    }
+  }

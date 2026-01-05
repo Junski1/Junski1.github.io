@@ -1,0 +1,249 @@
+<!doctype html><!-- kerrotaan selaimelle dokumenttityyppi-->
+<html  lang="en"><!--tämän sisällä trakennetaan koko sivu-->
+    <head><!-- tässä kerrotaan selaimelle kakki taustatiedot-->
+        <meta charset="utf-8">
+        <meta name="description" content="A report for Delusions and Delicasies">
+        <meta name="keywords" content="CV, portfolio, project, report">
+        <meta name="author" content="Oskar Junnola">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="../css/styles.css" rel="stylesheet">
+        <link href="../css/project_styles.css" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+        <script src="../js/ExpandMenu.js"></script>
+        <script src="../js/ModalScripts.js"></script>
+        <title>Delusions and Delicasies report</title>
+    </head>
+    <body onload="CheckForMobile(), CreateModal('../img/DelusionsAndDelicasies/', 'info.json')">
+        <div id="PageWrapper">
+
+            <nav id="navbar">
+                <div id="navbar-content" class="flex column">
+                    <div id="profile">
+                        <img id="img-profile" class="non-mobile mb1" src="../img/profile.jpg" alt="profile picture">
+                        <h2 id="navname" class="mb1">Oskar Junnola</h2>
+                        <a class="mobile icon" onclick="ExpandMenu()"><i class="fa fa-bars"></i></a>
+                    </div>
+                    <div id="expand">
+                        
+                        <div class="navbar-nav flex column">
+                            <a class="nav-link mb1" href="../index.html">Home</a>
+                            <a class="nav-link mb2" href="../projects.html" title="Go to projects page">Projects</a>
+                        </div>
+                        <hr class="nav-devider mb2">
+                        <div class="navbar-nav flex column">
+                            <a class="nav-link mb2" href="#PageWrapper">To the top</a>
+                        </div>
+
+                    </div>
+
+                    <div id="nav-contacts" class="non-mobile flex column">
+                        <a href="mailto:oskarjunnola@gmail.com">oskarjunnola@gmail.com</a>
+                        <a href="tel:+358443488622">+(358) 44 3488 622</a>
+                        <div class="contact-icons flex flex-center">
+                            <a href="https://www.linkedin.com/in/oskarjunnola" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="https://github.com/Junski1/Git_Portfolio" target="_blank"><i class="fa-brands fa-github"></i></a>
+                            <a href="https://junsk1.itch.io" target="_blank"><i class="fa-brands fa-itch-io"></i></a>
+                        </div> 
+                    </div>
+                </div>
+            </nav>
+            <div id="content">
+                <div id="info-box" class="flex column">
+                    <div class ="flex mb1">
+                        <h3>Name:</h3> <h3>Delusions and Delicasies</h3>
+                    </div>
+                    <div class ="flex mb1">
+                        <h3>Type:</h3> <h3>School project</h3>
+                    </div>
+                    <div class ="flex  mb1">
+                        <h3>Members:</h3> <h3>Oskar Junnola
+                            <br><a href="https://portfolio.gamelab.fi/konstantinos.verykio/">Konstantinos Verykios</a>
+                            <br><a href="https://portfolio.gamelab.fi/henry.sanchez/">Henry Sanchez</a>
+                            <br><a href="https://portfolio.gamelab.fi/tuomas.tuuri/">Tuomas Tuuri</a></h3>
+                    </div>
+                    <div class ="flex  mb1">
+                        <h3>Timeframe:</h3> <h3>8 months</h3>
+                    </div>
+                    <div class ="flex">
+                        <h3>Role:</h3> <h3>Programmer</h3>
+                    </div>
+                </div>
+                <section>
+                    <div>
+                        <h1 class="header mb3">Delusions and Delicasies</h1>
+                        <h1 class="subheading mb1">Information</h1>
+                        <p class="para mb1">
+                            Delusions and Delicasies is a first person arena shooter game created for PC with Unity with C# being the programming language used. 
+                            The game is intended for players who enjoy games with simple graphics and exiting gameplay. 
+                            As of now Delusions and Delicasies has a working Demo scene that is playable with the core mechanics implemented.
+                        </p>
+                        <p class="para mb1">
+                            The game is set on a candy world with colorful arenas. The player has to fight enemies roaming in the delightful world trying to collect cake pieces to escape to the real world.
+                        </p>
+                        <p class="para mb3">
+                            After showcasing the demo at Demoday Vol. 7, some issues were discovered and the next step for the project is to fix the remaining issues. 
+                            After that we'll start implementing more features, refining features and UI and add more content like weapons, models, audio and more maps.
+                        </p>
+                        <h1 class="subheading mb1">Roles</h1>
+                        <ul class="mb3">
+                            <li><h3 class="subheading"><a href="https://portfolio.gamelab.fi/oskar.junnola/">Oskar Junnola</a>: programmer</h3></li>
+                            <li><h3 class="subheading"><a href="https://portfolio.gamelab.fi/henry.sanchez/">Henry Sanchez</a>: 3D modeling, programmer</h3></li>
+                            <li><h3 class="subheading"><a href="https://portfolio.gamelab.fi/tuomas.tuuri/">Tuomas Tuuri</a>: 3D modeling, programmer</h3></li>
+                            <li><h3 class="subheading"><a href="https://portfolio.gamelab.fi/konstantinos.verykio/">Konstantinos Verykios</a>: 3D modeling, Level design</h3></li>
+                        </ul>
+
+                        <h2 class="subheading mb1">development process 1.1.2025 - 31.5.2025</h2>
+                        <p class="para mb1">
+                            At the start we started planning the basic details of the project. Including menchanics and enemy types. I was tasked with creating the enemies' functionality like patrol, chase and attacking. 
+                            Konsta worked on models, Henry worked on player movement and Tuomas worked on creating the basic weapon functionality as well as the basic UI functionality. 
+                            After the base functionalities were done I took over the programming of the project and Henry and Tuomas moved on to 3D modeling.
+                        </p>
+                        <p class="para mb1">
+                            I created a very simple UI with menus. The enemy functionality started with creating a IDamageable interface and a Character base class. 
+                            Then I created an Enemy class and a ranged enemy class that derives from the enemy class and a ScriptableObject for the enemies. 
+                            <a href="#char_class">See image of the structure</a>. I then added patrol and chase states and their functionality for the enemies. 
+                        </p>
+                        <p class="para mb1">
+                            After Tuomas was ready with the basic functionality of the weapons. I created a weapon base class, a ScriptableObject for it, and then two derived classes hitscan and projectile weapons. from which all weapons will inherit from.
+                            <a href="#weapon_class">See image of the structure</a>. Then modified the weapon scripts to include the weapon classes. Then weapons were modified to fit both player and enemies. The UI was improved by adding health bars and ammo to it. 
+                            I then created pickable items a health pack and a ammo box. Added health seeking feature for low health enemies.
+                        </p>
+                        <p class="para mb1">
+                            I then started working on enemy spawning and creating the stage/arena functionality. Each stage has maxinum enemy count. 
+                            The stages inizialise on game start by spawning enemies to them and then deactivating the stage via unityEvents. If enemies are killed the stage starts a timer to spawn new enemies.
+                        </p>
+
+                        <p class="para mb1">
+                            Next I started creating different types of weapons. A flamethrower, a shotgun and a rocket laucher. 
+                            The flamethrower needed a damage-over-time effect. for the rocket laucher I created a bullet class with it's own functionality. 
+                            Projectiles derive from bullet class. 
+                        </p>
+
+                        <p class="para mb1">
+                           A field of view was added to the enemies. I then started creating the weapon switching and weapon pick up functionality. 
+                           Weapon holder was created which manages the players weapons. A weapon pickup script was created to allow interacting with the weapons. 
+                           Because of multiple weapons images for previous current and next weapons were added to the UI.
+                        </p>
+
+                        <p class="para mb3">
+                           I then continued working on the stages and the game mode. I added doors to lock the player to the arena. Added the cake piece as a win condition. 
+                           Lastly before Demoday Vol.7 new weapons with animations and models were added, animations and gameplay loop were polished further and finalized.
+                        </p>
+
+                        <h2 class="subheading mb1">development process 1.8.2025 - 31.12.2025</h2>
+
+                        <p class="para mb1">
+                            This time I mostly worked on other projects, but got some work done to this project as well. I started by reseaching about navmesh and it's agents. The issue we encountered during Demoday vol. 7 causing the enemies to sometimes get stuck when their next walkpoint is set to a platform above or below their current platform. 
+                            The solution to this is to add navmesh's off-mesh links to link the two platforms. 
+                        </p>
+                        
+                        <p class="para mb3">
+                            Next I created some visuals. First an idication of damage done to enemies. When the enemy is hit it creates a little pop up text with the damage on it. 
+                            Then I started creating a Boss to the game. For this I created a boss stage which spawns only the boss. When entering a boss stage an UI pops up with the boss' HP. The boss will also has some special attacks. but for now it is a Bigger enemy.
+                            Lastly I did some research on the fying enemy and melee weapons.
+                        </p>
+
+                        <h1 class="subheading mb1">Core mechanics</h1>
+                        <p class="para mb1">
+                            The map is devided into stages or arenas. Each stage has a number assigned to it. When spawning enemies they are assigned to a stage by setting a stage number for them. 
+                            When entering a stage the game will lock the player into the stage by closing all doors. An event is called which enables all enemies with that stage number and deactivating all other enemies. 
+                        </p>
+                        <p class="para mb1">
+                            The numbers of enemies killed in the stages is being tracked. When the number reaches a certain threshold the stage will activate it's cake piece to be collected. 
+                            After collecting the piece, doors will open letting the player enter the next stage. The player wins by collecting all cake pieces.
+                        </p>
+
+                        <p class="para mb3">
+                            For now the stages have health packs and ammo boxes scattered around with a respawn timer on the health packs.
+                        </p>
+
+                        <h3 class="subheading mb1">Player</h3>
+                        <img src="../img/DelusionsAndDelicasies/char_class_structure.png" alt="chart of the weapon class structure" id="char_class" class="para_img mb1">
+                        <p class="para mb3">
+                            Above is a simple sketch of the character class structure made to demonstrate the hierarchy. Player class inherit from character base class. The player has multiple movement options, double jump and a dash with invulnerability during the dash. 
+                            The player has a few weapon slots available is able to switch between weapons. The weapons can be picked up from the ground. 
+                            If all of the weapon slots are in use the current weapon is thrown to the ground. Current previous and the next weapons are shown on the UI.
+                        </p>
+                        <h3 class="subheading mb1">Weapons</h3>
+                        <img src="../img/DelusionsAndDelicasies/weapon_class_structure.png" alt="chart of the weapon class structure" id="weapon_class" class="para_img mb1">
+                        <p class="para mb1">
+                            Above is a simple sketch of the weapon class structure made to demonstrate the hierarchy. The game has 3 types of weapons: melee, projectile and hitscan weapons. All weapon types have the same base class from which they inherit basic functionality. 
+                            The basic weapon class structure is shown in the picture above. The basic functionality is a reload and a fire function which is called from the user of the weapon. 
+                            Both enemies and the player use the same weapon scripts. Enemies have a variant of the weapon prefabs with a boolean IsPlayer set to false. 
+                            IsPlayer variable controls the ammo in the UI which is called when fired. Damage is dealt by checking if the object hit has a IDamageable interface.
+                        </p>
+                        <p class="para mb2">
+                            Weapons can be picked up. When the weapons are on the ground they will have a weapon pickup script and weapon script disabled. It's rigidbody is set to dynamic and collider to non-trigger.
+                            when picked up by the player it is set as a child of the weaponholder object. It's rigidbody is set to kinematic and collider to trigger. 
+                            The weapon script is enabled and weapon pickup is removed. When dropped it returns to it's original state.
+                        </p>
+
+                        <img src="../img/DelusionsAndDelicasies/SO_data.png" alt="ScriptableObject in inspector" class="para_img mb1">
+                        <p class="para mb1">
+                            Weapon data are taken from a ScriptableObject. the base ScriptableObject is for hitscan and melee weapons and the projectile weapon uses a derived class with the bullet prefab and bullet speed variables.
+                        </p>
+                        <p class="para mb1">
+                            Hitscan weapons fire a raycast in to the direction the user is facing.
+                        </p>
+                        <p class="para mb1">
+                            Projectile weapon fires a object with a bullet class which data is initialized when spawned. 
+                            Bullet class has a damage variable and a life time that is calculated from the weapon's range and the bullet's speed.
+                        </p>
+                        <p class="para mb3">
+                            Melee weapons are still on development but thought process is as follows: 
+                            When the fire function is called the weapon will call for the an animation to play which then activates a function that check for enemies in front of the user.
+                        </p>
+
+                        <h3 class="subheading mb1">Enemies</h3>
+                        <p class="para mb1">
+                            All enemies inherit from character base class. Enemies use navmesh to move in the arena and they have three different states. 
+                            <strong>Roam/patrol</strong>: a random point is taken within their roaming range, that point is set as the next destination for the navmesh agent. 
+                            If the player enters the enemy's detection range. The enemy will start to <strong>chase</strong> the player. If the enemy gets within it's attack range the enemy will stop and start to <strong>attack</strong> the player. 
+                            In the attack state the enemies shoot a raycast at the direction they are facing and checking if it hits the player. If the ray hits a wall or an obstacle they will go around the object to try and find the player.
+                        </p>
+                        <p class="para mb1">
+                            Enemies have a feature that if they are low enough and if the player is not at the attack range, they will try to find a health pack from the map and take it healing them.
+                        </p>
+                        <p class="para mb1">
+                            Currently there are only one type of enemy, ranged, because of melee weapons still being under development. Ranged enemies use a projectile weapon. 
+                            In the demo there are ordinary ranged enemies that roam and chase the player and turrets that stay still and attack on sight.
+                        </p>
+                        <p class="para mb3">
+                            A flying enemy is also in development. It is a ranged enemy with a different type of movement (not navmesh based). 
+                            Movement works but is not ready at the moment. This will be developed further in the future.
+                        </p>
+                        <h1 class="subheading mb1">Issues and solutions</h1>
+                        <p class="para mb1">
+                            There were only a few small issues during the development. First was a problem with collision detection with the enemies when they were moving. 
+                            The colliders didn't move correctly because the rigidbody interfering with the navmesh agent's movement. This was simply repaired by setting the enemy's rigibody to kinematic.
+                        </p>
+                        <p class="para mb1">
+                            The next issue occured when creating a simple moving platform. When the player entered the platform the player wouldn't move with it. 
+                            The solution was found from a question asked by CracksisT (2010) in the unity's community discussions website. The object entering the moving platform is set as a child of the platform and then removed when leaving.
+                        </p>
+
+                        <p class="para mb3">
+                            During demoday an issue with the enemy's navigation was encountered. 
+                            When the arena had multiple height levels, the roaming point would sometimes pick a point from inside of a box where the agent couldn't move to. 
+                            This caused the agent to stay still and would only move when the player came into detection range. At the time this has not been repaired because of schedule problems but will be the next step in th edevelopment.
+                        </p>
+                    </div>
+                    <!--The image gallery is created here via a JavaScript script-->
+                    <h1 class="subheading mb1">Gameplay</h1>
+                    <div id="slides-container" class="mb5">
+                    </div>
+
+                    <h1 class="subheading mb1">references</h1>
+                    <p class="para mb3">
+                        CracksisT. 2010. How to get a Character to move with a moving platform ? Discussions. Community. Unity. WWW-document.
+                        Available at: <a href="https://discussions.unity.com/t/how-to-get-a-character-to-move-with-a-moving-platform/1720">https://discussions.unity.com/t/how-to-get-a-character-to-move-with-a-moving-platform/1720</a>. [Accessed 25.5.2025].
+                    </p>
+                    <p id="reference">Icons from <a href="https://fontawesome.com/">Font Awesome</a></p>
+                </section>
+            </div>
+        </div>
+    </body>
+</html>

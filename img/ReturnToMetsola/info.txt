@@ -1,1 +1,0 @@
-{"txt": "Topdown arena shooter made with Unity and C#.;Published to inch.io.;Game Jam project with a group of 4 along the weekend;You collect weapons and shoot zombies. Objective is to survive as long as possible.;<a href='https://itch.io/jam/fuxi-game-jam-2024-2nd-edition/rate/3036210' target='_blank'>Link to the game</a>"}

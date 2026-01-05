@@ -1,0 +1,129 @@
+<!doctype html><!-- kerrotaan selaimelle dokumenttityyppi-->
+<html lang="en"><!--tämän sisällä trakennetaan koko sivu-->
+    <head><!-- tässä kerrotaan selaimelle kakki taustatiedot-->
+        <meta charset="utf-8">
+        <meta name="description" content="A projects overview page for portfolio">
+        <meta name="keywords" content="CV, portfolio, projects">
+        <meta name="author" content="Oskar Junnola">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="css/styles.css" rel="stylesheet">
+        <link href="css/project_overview_styles.css" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+        <script src="js/ExpandMenu.js"></script>
+        <title>Projects overview</title>
+    </head>
+    <!--Checks if mobile @media is active, Enables ExpandMenu-->
+    <body onload="CheckForMobile()">
+        <div id="PageWrapper">
+
+            <nav id="navbar">
+                <div id="navbar-content" class="flex column">
+                    <div id="profile">
+                        <!--profile image disabled if on mobile, expand menu icon enabled if on mobile-->
+                        <img id="img-profile" class="non-mobile mb1" src="img/profile.jpg" alt="profile picture">
+                        <h2 id="navname" class="mb1">Oskar Junnola</h2>
+                        <a class="mobile icon" onclick="ExpandMenu()"><i class="fa fa-bars"></i></a>
+                    </div>
+                    <div id="expand">
+                                                <!--the pages navigation, doesn't change-->
+                        <div class="navbar-nav flex column">
+                            <a class="nav-link mb1" href="index.html">Home</a>
+                            <a class="nav-link activeNav mb2" href="projects.html" title="Go to projects page">Projects</a>
+                        </div>
+                        <hr class="nav-devider mb2">
+                        <!--inside the page navigation, Changes depending on the page-->
+                        <div class="navbar-nav flex column">
+                            <a class="nav-link mb1" href="#work" onclick="ExpandMenu()">School / work</a>
+                            <a class="nav-link mb1" href="#personal" onclick="ExpandMenu()">Personal</a>
+                            <a class="nav-link mb2" href="#jam" onclick="ExpandMenu()">Game jams</a>
+                        </div>
+
+                    </div>
+                    <!--Contacts, disabled if on mobile-->
+                    <div id="nav-contacts" class="non-mobile flex column">
+                        <a href="mailto:oskarjunnola@gmail.com">oskarjunnola@gmail.com</a>
+                        <a href="tel:+358443488622">+(358) 44 3488 622</a>
+                        <div class="contact-icons flex flex-center">
+                            <a href="https://www.linkedin.com/in/oskarjunnola" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="https://github.com/Junski1/Git_Portfolio" target="_blank"><i class="fa-brands fa-github"></i></a>
+                            <a href="https://junsk1.itch.io" target="_blank"><i class="fa-brands fa-itch-io"></i></a>
+                        </div> 
+                    </div>
+                </div>
+            </nav>
+            <div id="content">
+                <section id="work">
+                    <h1 class="header mb3">School / Work</h1>
+                    <div class="projects-holder flex">
+                        <div class="project">
+                            <a href="projects/sludge.html" class="project-link">
+                                <img src="img/Sludge/sludge.png" alt="Image of Sludge">
+                                <div class="project-info flex">
+                                    <div class="flex"><h4>2</h4><i class="fa-solid fa-user-group"></i></div>
+                                    <h4>Sludge</h4>
+                                    <h4>2022</h4>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="project">
+                            <a href="projects/duckingout.html" class="project-link">
+                                <img src="img/DuckingOut/DuckingOut.jpg" alt="Image of Ducking Out">
+                                <div class="project-info flex">
+                                    <div class="flex"><h4>3</h4><i class="fa-solid fa-user-group"></i></div>
+                                    <h4>Ducking Out</h4>
+                                    <h4>2021</h4>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="project">
+                            <a href="projects/visualnovel.html" class="project-link">
+                                <img src="img/VisualNovel/visualNovel.png" alt="Image of Visual Novel">
+                                <div class="project-info flex">
+                                    <div class="flex"><h4>1</h4><i class="fa-solid fa-user-group"></i></div>
+                                    <h4>Visual Novel</h4>
+                                    <h4>2020</h4>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+                <hr id="personal">
+                <section>
+                    <h1 class="header mb3">Personal</h1>
+                    <div class="projects-holder flex">
+                        <div class="project">
+                            <a href="projects/photo_organizer.html" class="project-link">
+                                <img src="img/PhotoOrganizer/start.JPG" alt="Image of Photo organizer">
+                                <div class="project-info flex">
+                                    <div class="flex"><h4>1</h4><i class="fa-solid fa-user-group"></i></div>
+                                    <h4>Photo organizer</h4>
+                                    <h4>2024</h4>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+                <hr id="jam">
+                <!--End-section makes the last section as small as can be, other sections is atleast one viewport long-->
+                <section id="end-section">
+                    <h1 class="header mb3">Game jam</h1>
+                    <div class="projects-holder flex">
+                        <div class="project">
+                            <a href="projects/returntometsola.html" class="project-link">
+                                <img src="img/ReturnToMetsola/Gameplay.png" alt="Image of Return to metsola">
+                                <div class="project-info flex">
+                                    <div class="flex"><h4>4</h4><i class="fa-solid fa-user-group"></i></div>
+                                    <h4>Return to metsola</h4>
+                                    <h4>2024</h4>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <p id="reference">Icons from <a href="https://fontawesome.com/">Font Awesome</a></p>
+                </section>
+            </div>
+        </div>
+    </body>
+</html>

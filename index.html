@@ -1,285 +1,401 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html><!-- kerrotaan selaimelle dokumenttityyppi-->
+<html  lang="en"><!--tämän sisällä trakennetaan koko sivu-->
+    <head><!-- tässä kerrotaan selaimelle kakki taustatiedot-->
+        <meta charset="utf-8">
+        <meta name="description" content="A CV and portfolio page">
+        <meta name="keywords" content="CV, portfolio">
+        <meta name="author" content="Oskar Junnola">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<head>
+        <link href="css/styles.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+        <script src="js/ExpandMenu.js"></script>
+        <script src="js/ModalScripts.js"></script>
+        <title>Oskar Junnola</title>
+    </head>
+    <!--Checks if mobile @media is active, Enables ExpandMenu-->
+    <body onload="CheckForMobile(), ActivateOnLoad()">
+        <div id="PageWrapper">
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="Oskar Junnola">
+            <nav id="navbar">
+                <div id="navbar-content" class="flex column">
+                    <!--profile image disabled if on mobile, expand menu icon enabled if on mobile-->
+                    <div id="profile">
+                        <img id="img-profile" class="non-mobile mb1" src="img/profile.jpg" alt="profile picture">
+                        <h2 id="navname" class="mb1">Oskar Junnola</h2>
+                        <a class="mobile icon" onclick="ExpandMenu()"><i class="fa fa-bars"></i></a>
+                    </div>
+                    <div id="expand">
+                        <!--the pages navigation, doesn't change-->
+                        <div class="navbar-nav flex column">
+                            <a class="nav-link activeNav mb1" href="index.html">Home</a>
+                            <a class="nav-link mb2" href="projects.html" title="Go to projects page">Projects</a>
+                        </div>
+                        <hr class="nav-devider mb2">
+                        <!--inside the page navigation, Changes depending on the page-->
+                        <div class="navbar-nav flex column">
+                            <a class="nav-link mb1" href="#about" onclick="ExpandMenu()">About</a>
+                            <a class="nav-link mb1" href="#experience" onclick="ExpandMenu()">Experience</a>
+                            <a class="nav-link mb1" href="#education" onclick="ExpandMenu()">Education</a>
+                            <a class="nav-link mb1" href="#skills" onclick="ExpandMenu()">Skills</a>
+                            <a class="nav-link mb2" href="#contacts" onclick="ExpandMenu()">Contacts</a>
+                        </div>
+                    </div>
+                    <!--Contacts, disabled if on mobile-->
+                    <div id="nav-contacts" class="non-mobile flex column">
+                        <a href="mailto:oskarjunnola@gmail.com">oskarjunnola@gmail.com</a>
+                        <a href="tel:+358443488622">+(358) 44 3488 622</a>
+                        <div class="contact-icons flex flex-center">
+                            <a href="https://www.linkedin.com/in/oskarjunnola" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="https://github.com/Junski1/Git_Portfolio" target="_blank"><i class="fa-brands fa-github"></i></a>
+                            <a href="https://junsk1.itch.io" target="_blank"><i class="fa-brands fa-itch-io"></i></a>
+                        </div> 
+                    </div>
+                </div>
+            </nav>
+            <div id="content">
+                <section id="about" class="flex">
+                    <div class="section-content">
+                        <h1 class="header mb0">Oskar Junnola</h1>
+                        <!--Has telephone and email links-->
+                        <h3 class="non-mobile subheading mb5">Laivuri petterin katu 5 a 2 · Helsinki, 00790 · <a href="tel:+358443488622">+(358) 44 3488 622</a> · <a  href="mailto:oskarjunnola@gmail.com">oskarjunnola@gmail.com</a></h3>
+                        
+                        <div class="mobile">
+                            <div class="flex column">
+                                <h3 class="subheading mb0">Laivuri petterin katu 5 a 2</h3>
+                                <h3 class="subheading mb0">Helsinki, 00790</h3>
+                                <h3 class="subheading mb0"><a href="tel:+358443488622">+(358) 44 3488 622</a></h3>
+                                <h3 class="subheading mb5"><a  href="mailto:oskarjunnola@gmail.com">oskarjunnola@gmail.com</a></h3>
+                            </div>
+                        </div>
 
-    <title>Oskar Junnola</title>
+                        <p class="para mb2">
+                            I am a beginner game programmer who is mostly focused in game development. 
+                            Currently studying game programming at <a href="https://xamk.fi" target="_blank">South-Eastern Finland University of Applied Sciences (Xamk)</a> Kotka.
+                        </p>
+                        <p class="para mb2">
+                            I have work experience in game programming for both computers and mobile devices. During my military service, I worked as both a programmer and an IT support specialist.
+                            As part of my previous studies, I completed internships where I developed a multiplayer mobile game with another student and worked on full-stack development for a website.
+                        </p>
+                        <p class="para mb5">
+                            I am cheerful and positive. Thanks to various school and work projects, I collaborate well with team members.
+                            I enjoy problem-solving, challenging myself, and helping others. I am proactive, systematic, quick, and always eager to learn.
+                        </p>
+                    </div>
+                </section>
+                <hr id="experience">
+                <section>
+                    <div class="section-content">
+                        <h1 class="header mb3">Experience</h1>
+                        <div class="resume mb5">
+                            <div class="resume-info">
+                                <h2 class="mb0">Teaching Assistant</h2>
+                                <h3 class="subheading mb1">Kouvola’s vocational college Eduko</h3>
+                                <div class="time mb2">
+                                    <p>October 2023 - December 2023</p>
+                                </div>
+                                <p class="mb1">Helping of ICT teachers by instructing and helping students</p>
+                            </div>
+                        </div>
+                        <div class="resume flex mb5">
+                            <div class="resume-info">
+                                <h2 class="mb0">Programmer</h2>
+                                <h3 class="subheading mb1">Finnish defense forces | Military service</h3>
+                                <div class="time mb2">
+                                    <p>February 2023 - September 2023</p>
+                                </div>
+                                <p class="mb1">Development of addons to games called VBS3 and VBS4 for training use using SQF and C++.
+                                     Designment of scenes/levels to the games using built-in editor.
+                                      Desigment of levels and held training sessions for conscripts</p>
+                            </div>
+                            
 
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+                            
+                        </div>
+                        <div class="resume flex mb5">
+                            <div class="resume-info">
+                                <h2 class="mb0">Programming Intern</h2>
+                                <h3 class="subheading mb1">Seepia Games | On-the-job training</h3>
+                                <div class="time mb2">
+                                    <p>January 2022 - March 2022</p>
+                                </div>
+                                <p class="mb1">Development of a mobile game project meant for interns with Unity and C#.
+                                     Refactoring the code from client based movement to server based.
+                                      Creation of a power up system for the game as a skills demonstration.</p>
+                            </div>
 
-    <!-- Custom fonts for this template -->
-    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+                            
+                        </div>
+                        <div class="resume flex mb5">
+                            <div class="resume-info">
+                                <h2 class="mb0">Web Design Intern</h2>
+                                <h3 class="subheading mb1">Poikilo Museums | On-The-Job training</h3>
+                                <div class="time mb2">
+                                    <p>October 2021 - December 2021</p>
+                                    <p>October 2020 - December 2020</p>
+                                </div>
+                                <p class="mb1">Development of a website with a co-student with a integrated map with 3 different routes.
+                                     Using JavaScript, HTML, CSS, PHP, JSON and SQL in the project.</p>                           
+                            </div>
 
-    <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+                        </div>
+                    </div>
+                </section>
+                <hr id="education">
+                <section>
+                    <div class="section-content">
+                        <h1 class="header mb3">Education</h1>
 
-    <!-- Custom styles for this template -->
-    <link href="css/resume.min.css" rel="stylesheet">
+                        <div class="resume mb5">
+                            <div class="resume-info">
+                                <h2 class="mb0">South-Eastern Finland University of Applied Sciences Kotka</h2>
+                                <h3 class="subheading mb1">Bachelor of engineering, Game programming</h3>
+                                <div class="time mb2">
+                                    <p>August 2024 - Current</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="resume mb5">
+                            <div class="resume-info">
+                                <h2 class="mb0">Kouvola's general upper secondary evening school</h2>
+                                <h3 class="subheading mb1">Finnish matriculation examination</h3>
+                                <div class="time mb2">
+                                    <p>August 2019 - May 2022</p>
+                                </div>
+                                <p  class="mb1">Advanced Maths - <i>M</i><br>Advanced English - <i>M</i><br>Finnish - <i>C</i></p>
+                            </div>
+                        </div> 
+                        <div class="resume flex mb5">
+                            <div class="resume-info">
+                                <h2 class="mb0">Kouvola’s vocational college Eduko</h2>
+                                <h3 class="subheading mb1">ICT vocational upper secondary qualification</h3>
+                                <div class="time mb2">
+                                    <p>August 2019 - May 2022</p>
+                                </div>
+                                <p  class="mb1">GPA - <i>4.34</i></p>
+                            </div>
+                        </div> 
+                    </div>
+                </section>
+                <hr id="skills">
+                <section>
+                    <div class="section-content">
+                        <h1 class="header mb3">Skills</h1>
+                        <h2 class="subheading mb1">Languages</h2>
+                        <div class="skill-rating flex mb5">
+                            <div class="flex column">
+                                <div class="skill-holder flex column">
+                                    <h3 class="subheading mb1">Finnsh</h3>
+                                    <div class="stars mb2 flex flex-center">
+                                        <i class="fa fa-star fa-lg checked"></i>
+                                        <i class="fa fa-star fa-lg checked"></i>
+                                        <i class="fa fa-star fa-lg checked"></i>
+                                        <i class="fa fa-star fa-lg checked"></i>
+                                        <i class="fa fa-star fa-lg checked"></i>
+                                    </div>
+                                </div>
+                                <div class="skill-holder flex column">
+                                    <h3 class="subheading mb1">English</h3>
+                                    <div class="stars mb2 flex flex-center">
+                                        <i class="fa fa-star fa-lg checked"></i>
+                                        <i class="fa fa-star fa-lg checked"></i>
+                                        <i class="fa fa-star fa-lg checked"></i>
+                                        <i class="fa fa-star fa-lg checked"></i>
+                                        <i class="fa-regular fa-lg fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex column">
+                                <div class="skill-holder flex column">
+                                    <h3 class="subheading mb1">Swedish</h3>
+                                    <div class="stars mb2 flex flex-center">
+                                        <i class="fa fa-star fa-lg checked"></i>
+                                        <i class="fa fa-star fa-lg checked"></i>
+                                        <i class="fa-regular fa-lg fa-star"></i>
+                                        <i class="fa-regular fa-lg fa-star"></i>
+                                        <i class="fa-regular fa-lg fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="skill-holder flex column">
+                                    <h3 class="subheading mb1">Italian</h3>
+                                    <div class="stars mb2 flex flex-center">
+                                        <i class="fa fa-star fa-lg checked"></i>
+                                        <i class="fa-regular fa-lg fa-star"></i>
+                                        <i class="fa-regular fa-lg fa-star"></i>
+                                        <i class="fa-regular fa-lg fa-star"></i>
+                                        <i class="fa-regular fa-lg fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <h2 class="subheading mb1">Programming languages</h2>
+                        <div class="skill-rating flex mb5">
+                            <div class="flex column">
+                                <div class="skill-holder flex column">
+                                    <h3 class="subheading mb1">C#</h3>
+                                    <div class="stars mb2 flex flex-center">
+                                        <i class="fa fa-star fa-lg checked"></i>
+                                        <i class="fa fa-star fa-lg checked"></i>
+                                        <i class="fa fa-star fa-lg checked"></i>
+                                        <i class="fa-regular fa-lg fa-star"></i>
+                                        <i class="fa-regular fa-lg fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="skill-holder flex column">
+                                    <h3 class="subheading mb1">C++</h3>
+                                    <div class="stars mb2 flex flex-center">
+                                        <i class="fa fa-star fa-lg checked"></i>
+                                        <i class="fa fa-star fa-lg checked"></i>
+                                        <i class="fa-regular fa-lg fa-star"></i>
+                                        <i class="fa-regular fa-lg fa-star"></i>
+                                        <i class="fa-regular fa-lg fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="skill-holder flex column">
+                                    <h3 class="subheading mb1">JavaScript</h3>
+                                    <div class="stars mb2 flex flex-center">
+                                        <i class="fa fa-star fa-lg checked"></i>
+                                        <i class="fa fa-star fa-lg checked"></i>
+                                        <i class="fa-regular fa-lg fa-star"></i>
+                                        <i class="fa-regular fa-lg fa-star"></i>
+                                        <i class="fa-regular fa-lg fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex column">
+                                <div class="skill-holder flex column">
+                                    <h3 class="subheading mb1">HTML</h3>
+                                    <div class="stars mb2 flex flex-center">
+                                        <i class="fa fa-star fa-lg checked"></i>
+                                        <i class="fa fa-star fa-lg checked"></i>
+                                        <i class="fa fa-star fa-lg checked"></i>
+                                        <i class="fa-regular fa-lg fa-star"></i>
+                                        <i class="fa-regular fa-lg fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="skill-holder flex column">
+                                    <h3 class="subheading mb1">CSS</h3>
+                                    <div class="stars mb2 flex flex-center">
+                                        <i class="fa fa-star fa-lg checked"></i>
+                                        <i class="fa fa-star fa-lg checked"></i>
+                                        <i class="fa fa-star fa-lg checked"></i>
+                                        <i class="fa-regular fa-lg fa-star"></i>
+                                        <i class="fa-regular fa-lg fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="skill-holder flex column">
+                                    <h3 class="subheading mb1">PHP</h3>
+                                    <div class="stars mb2 flex flex-center">
+                                        <i class="fa fa-star fa-lg checked"></i>
+                                        <i class="fa fa-star fa-lg checked"></i>
+                                        <i class="fa-regular fa-lg fa-star"></i>
+                                        <i class="fa-regular fa-lg fa-star"></i>
+                                        <i class="fa-regular fa-lg fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <h2 class="subheading mb1">Tools</h2>
+                        <div class="skill-rating flex mb5">
+                            <div class="flex column">
+                                <div class="skill-holder flex column">
+                                    <h3 class="subheading mb1">Unity</h3>
+                                    <div class="stars mb2 flex flex-center">
+                                        <i class="fa fa-star fa-lg checked"></i>
+                                        <i class="fa fa-star fa-lg checked"></i>
+                                        <i class="fa fa-star fa-lg checked"></i>
+                                        <i class="fa fa-star fa-lg checked"></i>
+                                        <i class="fa-regular fa-lg fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="skill-holder flex column">
+                                    <h3 class="subheading mb1">UE 5</h3>
+                                    <div class="stars mb2 flex flex-center">
+                                        <i class="fa fa-star fa-lg checked"></i>
+                                        <i class="fa fa-star fa-lg checked"></i>
+                                        <i class="fa-regular fa-lg fa-star"></i>
+                                        <i class="fa-regular fa-lg fa-star"></i>
+                                        <i class="fa-regular fa-lg fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="skill-holder flex column">
+                                    <h3 class="subheading mb1">Blender</h3>
+                                    <div class="stars mb2 flex flex-center">
+                                        <i class="fa fa-star fa-lg checked"></i>
+                                        <i class="fa fa-star fa-lg checked"></i>
+                                        <i class="fa-regular fa-lg fa-star"></i>
+                                        <i class="fa-regular fa-lg fa-star"></i>
+                                        <i class="fa-regular fa-lg fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex column">
+                                <div class="skill-holder flex column">
+                                    <h3 class="subheading mb1">Adobe</h3>
+                                    <div class="stars mb2 flex flex-center">
+                                        <i class="fa fa-star fa-lg checked"></i>
+                                        <i class="fa fa-star fa-lg checked"></i>
+                                        <i class="fa-regular fa-lg fa-star"></i>
+                                        <i class="fa-regular fa-lg fa-star"></i>
+                                        <i class="fa-regular fa-lg fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="skill-holder flex column">
+                                    <h3 class="subheading mb1">M365</h3>
+                                    <div class="stars mb2 flex flex-center">
+                                        <i class="fa fa-star fa-lg checked"></i>
+                                        <i class="fa fa-star fa-lg checked"></i>
+                                        <i class="fa fa-star fa-lg checked"></i>
+                                        <i class="fa-regular fa-lg fa-star"></i>
+                                        <i class="fa-regular fa-lg fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="skill-holder flex column">
+                                    <h3 class="subheading mb1">Server/OS</h3>
+                                    <div class="stars mb2 flex flex-center">
+                                        <i class="fa fa-star fa-lg checked"></i>
+                                        <i class="fa fa-star fa-lg checked"></i>
+                                        <i class="fa-regular fa-lg fa-star"></i>
+                                        <i class="fa-regular fa-lg fa-star"></i>
+                                        <i class="fa-regular fa-lg fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <hr id="contacts">
+                <!--End-section makes the last section as small as can be, other sections is atleast one viewport long-->
+                <section id="end-section" class="no-margin-right">
+                    <div class="section-content">
+                        <div class="cta flex column flex-center">
+                            <h1 class="header mb3">Contacts</h1>
 
-</head>
+                            <div class="mb2">
+                                <!--Downloadable resumes-->
+                                <div id="cv-download">
+                                    <h3 class="subheading dropbtn mb0">Download my CV here</h3>
+                                    <div class="dropdown-content">
+                                      <a href="downloads/resume_finnish.pdf" target="_blank" download="ansioluettelo">Finnish</a>
+                                      <a href="downloads/resume_english.pdf" target="_blank" download="resume">English</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <h3 class="subheading mb2"><a href="mailto:oskarjunnola@gmail.com">oskarjunnola@gmail.com</a> · <a href="tel:+358443488622">+(358) 44 3488 622</a></h3>
 
-  <body id="page-top" onload="CreateProjectsPage()">
+                            <h3 class="subheading mb1">You can also find me in</h3>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
-      <a class="navbar-brand js-scroll-trigger" href="#page-top">
-        <span class="d-block d-lg-none">OSKAR JUNNOLA</span>
-        <span class="d-none d-lg-block">
-          <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/profile.jpg" alt="">
-          <h3 class="mb-1">OSKAR JUNNOLA</h3>
-        </span>
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#about">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#experience">Experience</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#education">Education</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#interests">Interests</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#projects">Projects</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-
-    <div class="container-fluid p-0">
-
-      <section class="resume-section p-3 p-lg-5 d-flex d-column" id="about">
-        <div class="my-auto">
-          <h1 class="mb-0">Oskar
-            <span class="text-primary">Junnola</span>
-          </h1>
-          <div class="subheading mb-5">Laivuri Petterin katu 5 A 2 · Helsinki, 00790 · +(358) 44 3488622 ·
-              <a href="mailto:oskarjunnola@gmail.com">oskarjunnola@gmail.com</a>
-          </div>
-          <p class="mb-2">
-            I am a beginner game programmer who is mostly focused in game development. 
-            Currently studying game programming at <a href="https://www.xamk.fi" target="_blank">South-Eastern Finland University of Applied Sciences (Xamk)</a> Kotka.
-          </p>
-          <p class="mb-2">
-            I have work experience in game programming for both computers and mobile devices. During
-            my military service, I worked as both a programmer and an IT
-            support specialist. As part of my previous studies, I completed
-            internships where I developed a multiplayer mobile game with
-            another student and worked on full-stack development for a
-            website.
-          </p>
-          <p class="mb-5">
-            I am cheerful and positive. Thanks to various school and work projects, I collaborate well with
-            team members. I enjoy problem-solving, challenging myself, and helping others. I am proactive, systematic, quick, and always eager to learn. 
-          </p>
-          <ul class="list-inline list-social-icons mb-0">
-            <li class="list-inline-item">
-              <a href="https://www.linkedin.com/in/oskarjunnola" target="_blank">
-                <span class="fa-stack fa-lg">
-                  <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
-                </span>
-              </a>
-              <a href="https://github.com/Junski1/Git_Portfolio" target="_blank">
-                <span class="fa-stack fa-lg">
-                  <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                </span>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="experience">
-          <div class="my-auto">
-              <h2 class="mb-5">Experience</h2>
-
-              <div class="resume-item d-flex flex-column flex-md-row mb-5">
-                  <div class="resume-content mr-auto">
-                      <h3 class="mb-0">Teaching Assistant</h3>
-                      <div class="subheading mb-3">Kouvola’s vocational college Eduko</div>
-                      <p>Helped ICT teachers by instructing and helping students.</p>
-                  </div>
-                  <div class="resume-date text-md-right">
-                      <span class="text-primary">October 2023 - December 2023</span>
-                  </div>
-              </div>
-
-              <div class="resume-item d-flex flex-column flex-md-row mb-5">
-                  <div class="resume-content mr-auto">
-                      <h3 class="mb-0">Programmer</h3>
-                      <div class="subheading mb-3">Finnish defense forces | Military service</div>
-                      <p>Development of addons to games called VBS3 and VBS4 for training use using SQF and C++. Designment of scenes/levels to the games using built-in editor. Desigment of levels and held training sessions for US soldiers.</p>
-                  </div>
-                  <div class="resume-date text-md-right">
-                      <span class="text-primary">February 2023 - September 2023</span>
-                  </div>
-              </div>
-
-              <div class="resume-item d-flex flex-column flex-md-row mb-5">
-                  <div class="resume-content mr-auto">
-                      <h3 class="mb-0">Programming Intern</h3>
-                      <div class="subheading mb-3">Seepia Games | On-the-job training</div>
-                      <p>Development of a mobile game project meant for interns with Unity and C#. Refactoring the code from client based movement to server based. Creation of a power up system for the game as a skills demonstration.</p>
-                  </div>
-                  <div class="resume-date text-md-right">
-                      <span class="text-primary">January 2022 - March 2022</span>
-                  </div>
-              </div>
-
-              <div class="resume-item d-flex flex-column flex-md-row">
-                  <div class="resume-content mr-auto">
-                      <h3 class="mb-0">Web Design Intern</h3>
-                      <div class="subheading mb-3">Poikilo Museums | On-The-Job training</div>
-                      <p>Development of a website with a co-student with a integrated map with 3 different routes. Using JavaScript, HTML, CSS, PHP, JSON and SQL in the project.</p>
-                  </div>
-                  <div class="resume-date text-md-right">
-                      <span class="text-primary">October 2021 - December 2021 <br> October 2020 - December 2020 </span>
-                  </div>
-              </div>
-
-          </div>
-
-      </section>
-
-      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="education">
-        <div class="my-auto">
-          <h2 class="mb-5">Education</h2>
-
-            <div class="resume-item d-flex flex-column flex-md-row mb-5">
-              <div class="resume-content mr-auto">
-                  <h3 class="mb-0">South-Eastern Finland University of Applied Sciences Kotka</h3>
-                  <div class="subheading mb-3">Bachelor of engineering, Game programming</div>
-              </div>
-            <div class="resume-date text-md-right">
-                <span class="text-primary">August 2024 - Current</span>
+                            <div class="contact-icons flex flex-center">
+                                <a href="https://www.linkedin.com/in/oskarjunnola" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                                <a href="https://github.com/Junski1/Git_Portfolio" target="_blank"><i class="fa-brands fa-github"></i></a>
+                                <a href="https://junsk1.itch.io" target="_blank"><i class="fa-brands fa-itch-io"></i></a>
+                            </div> 
+                        </div>
+                    </div>
+                    <p id="reference">Icons from <a href="https://fontawesome.com/">Font Awesome</a></p>
+                </section>
             </div>
-          </div>
-
-          <div class="resume-item d-flex flex-column flex-md-row mb-5">
-              <div class="resume-content mr-auto">
-                  <h3 class="mb-0">Kouvola's evening high school</h3>
-                  <div class="subheading mb-3">Finnish matriculation examination</div>
-                  <p>Advanced Maths - <i>M</i></p>
-                  <p>Advanced English - <i>M</i></p>
-              </div>
-            <div class="resume-date text-md-right">
-                <span class="text-primary">August 2019 - May 2022</span>
-            </div>
-          </div>
-
-          <div class="resume-item d-flex flex-column flex-md-row">
-            <div class="resume-content mr-auto">
-                <h3 class="mb-0">Kouvola’s vocational college Eduko</h3>
-              <div class="subheading mb-3">ICT vocational upper secondary qualification</div>
-              <p>GPA: 4.34</p>
-            </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">August 2019 - April 2022</span>
-            </div>
-          </div>
-
         </div>
-      </section>
-
-      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="skills">
-        <div class="my-auto">
-          <h2 class="mb-5">Skills</h2>
-
-          <div class="subheading mb-3">Programming Languages &amp; Tools</div>
-          <ul class="list-inline list-icons">
-              <li class="list-inline-item">
-                <a href="https://unity.com/" target="_blank" class="devicons devicon-unity-plain"></a>
-              </li>
-              <li class="list-inline-item">
-                <a href="https://dotnet.microsoft.com/en-us/languages/csharp" target="_blank" class="devicons devicon-csharp-plain"></a>
-              </li>
-              <li class="list-inline-item">
-                <a href="https://visualstudio.microsoft.com/" target="_blank" class="devicons devicon-visualstudio-plain"></a>
-              </li>
-              <li class="list-inline-item">
-                <a href="https://code.visualstudio.com/" target="_blank" class="devicons devicon-vscode-plain"></a>
-            </li>
-              <li class="list-inline-item">
-                <a href="https://github.com/" target="_blank" class="devicons devicon-github-original"></a>
-              </li>
-              <li class="list-inline-item">
-                <a href="https://git-scm.com/" target="_blank" class="devicons devicon-git-plain"></a>
-              </li>
-              <li class="list-inline-item">
-                <a href="https://www.javascript.com/" target="_blank" class="devicons devicon-javascript-plain"></a>
-              </li>
-              <li class="list-inline-item">
-                <a href="https://www.mysql.com/" target="_blank" class="devicons devicon-mysql-original"></a>
-              </li>
-              <li class="list-inline-item">
-                <a href="https://www.php.net/" target="_blank" class="devicons devicon-php-plain"></a>
-              </li>
-              <li class="list-inline-item">
-                <a href="https://html.com/" target="_blank" class="devicon-html5-plain"></a>
-              </li>
-              <li class="list-inline-item">
-                <a href="https://www.w3.org/Style/CSS/Overview.en.html" target="_blank" class="devicon-css3-plain"></a>
-              </li>
-          </ul>
-          <div>
-            <p style="font-size:12px; color:grey">Click the icons for more info.</p>
-          </div>
-          <div class="subheading mb-3">Workflow</div>
-          <ul class="fa-ul mb-0">
-            <li>
-              <i class="fa-li fa fa-check"></i>
-              Agile Development &amp; Scrum</li>
-          </ul>
-        </div>
-      </section>
-
-      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="interests">
-        <div class="my-auto">
-          <h2 class="mb-5">Interests</h2>
-          <p>Apart from being a programmer, I enjoy most of my time with friends and loved ones. Indoors I enjoy most of my time playing video games and watching movies and series old and new. Cooking is also one of my passions.</p>
-          <p>Going outdoors, being in nature and doing sports, especially football is something I've always loved. In addition to playing it myself, I manage a junior team</p>
-        </div>
-      </section>
-
-      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="projects">
-          <div class="my-auto">
-              <h2 class="mb-5">Projects</h2>
-          </div>
-          <div style="font-size:12px; color:grey">
-            <p>This page is a template with a MIT license from <a href="https://startbootstrap.com/theme/resume" target="_blank">https://startbootstrap.com/theme/resume</a> which i have just modified only the projects page is entirely made by me</p>
-          </div>
-      </section>
-    </div>
-
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Plugin JavaScript -->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
-    <!-- Custom scripts for this template -->
-    <script src="js/resume.min.js"></script>
-
-  </body>
-
+    </body>
 </html>

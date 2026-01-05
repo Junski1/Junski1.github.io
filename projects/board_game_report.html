@@ -1,0 +1,241 @@
+<!doctype html><!-- kerrotaan selaimelle dokumenttityyppi-->
+<html  lang="en"><!--tämän sisällä trakennetaan koko sivu-->
+    <head><!-- tässä kerrotaan selaimelle kakki taustatiedot-->
+        <meta charset="utf-8">
+        <meta name="description" content="A report for a project">
+        <meta name="keywords" content="CV, portfolio, project, report">
+        <meta name="author" content="Oskar Junnola">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="../css/styles.css" rel="stylesheet">
+        <link href="../css/project_styles.css" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+        <script src="../js/ExpandMenu.js"></script>
+        <script src="../js/ModalScripts.js"></script>
+        <title>Board Game</title>
+    </head>
+    <body onload="CheckForMobile(), CreateModal('../img/BoardGame/', 'info.json')">
+        <div id="PageWrapper">
+
+            <nav id="navbar">
+                <div id="navbar-content" class="flex column">
+                    <div id="profile">
+                        <img id="img-profile" class="non-mobile mb1" src="../img/profile.jpg" alt="profile picture">
+                        <h2 id="navname" class="mb1">Oskar Junnola</h2>
+                        <a class="mobile icon" onclick="ExpandMenu()"><i class="fa fa-bars"></i></a>
+                    </div>
+                    <div id="expand">
+                        
+                        <div class="navbar-nav flex column">
+                            <a class="nav-link mb1" href="../index.html">Home</a>
+                            <a class="nav-link mb2" href="../projects.html" title="Go to projects page">Projects</a>
+                        </div>
+                        <hr class="nav-devider mb2">
+                        <div class="navbar-nav flex column">
+                            <a class="nav-link mb2" href="#PageWrapper">To the top</a>
+                        </div>
+
+                    </div>
+
+                    <div id="nav-contacts" class="non-mobile flex column">
+                        <a href="mailto:oskarjunnola@gmail.com">oskarjunnola@gmail.com</a>
+                        <a href="tel:+358443488622">+(358) 44 3488 622</a>
+                        <div class="contact-icons flex flex-center">
+                            <a href="https://www.linkedin.com/in/oskarjunnola" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="https://github.com/Junski1/Git_Portfolio" target="_blank"><i class="fa-brands fa-github"></i></a>
+                            <a href="https://junsk1.itch.io" target="_blank"><i class="fa-brands fa-itch-io"></i></a>
+                        </div> 
+                    </div>
+                </div>
+            </nav>
+            <div id="content">
+                <div id="info-box" class="flex column">
+                    <div class ="flex mb1">
+                        <h3>Name:</h3> <h3>Board game</h3>
+                    </div>
+                    <div class ="flex mb1">
+                        <h3>Type:</h3> <h3>School / Personal project</h3>
+                    </div>
+                    <div class ="flex  mb1">
+                        <h3>Members:</h3> <h3>Oskar Junnola</h3>
+                    </div>
+                    <div class ="flex  mb1">
+                        <h3>Timeframe:</h3> <h3>4 months</h3>
+                    </div>
+                    <div class ="flex">
+                        <h3>Role:</h3> <h3>All</h3>
+                    </div>
+                </div>
+                <section>
+                    <div>
+                        <h1 class="header mb3">Board Game</h1>
+                        <h1 class="subheading mb1">Information</h1>
+                        <p class="para mb3">
+                            This board game is a fun party game to play with friends. 
+                            You race to the end of the board against the other players while completing different tasks. 
+                            The tasks' icludes different allocation. Varying from solo tasks to all players.
+                        </p>
+                        <h1 class="subheading mb1">Development process August 2025 - December 2025</h1>
+                        <ul class="mb3">
+                            <li><h3 class="subheading"><a href="https://portfolio.gamelab.fi/oskar.junnola/">Oskar Junnola</a>: All</h3></li>
+                        </ul>
+                        <p class="para mb1">
+                            This board game started as an idea of a party game to play with friends when spending time with them. 
+                            Because playing the game might include a large group of people I decided that, playing it from a TV with a big screen would be the best way to achieve a good and fun experience.
+                        </p>
+                        <p class="para mb1">
+                            I started by creating a simple UI, a game manager and a player class with an ID, a slot number which indicates where the player is on the board. 
+                            For the player I used a model of a pawn I had done.
+                            Then I added some slots the player can move to. The game manager uses events to control the turns and actions in the game. 
+                            After a simple version of the player movement was done I created the tasks. <a href="#tasks">See tasks below!</a>
+                        </p>
+                        <p class="para mb1">
+                            Tasks are created with a scriptable object with information about the type of task it is. And is saved into a slot on the board. <a href="#tasks">More information on this below. </a>
+                            I then of course needed something to show the task to the player, so I created a UI panel for it. The first tasks were only timed. 
+                            After some more UI work and adding functionality. The player was shown the task corresponding to the slot, the timer could be started and when the task was done the next player's turn was up. 
+                        </p>
+                        <p class="para mb1">
+                            After the basic functionality of the game was done I started working on switching the camera between players and eventually the die. 
+                            This was done with Cinemachines virtual cameras (<a href="#references">Cinemachine</a> 2025). I created a camera manager that switches between cameras easily.
+                            A die camera and cameras for the players were added.
+                        </p>
+
+                        <p class="para mb1">
+                            At this time the rolling of the die was done simply by getting a random value and telling the player to move that amount. 
+                            So I created a die model with Blender. 
+                            With the help of Youtube videos done by <a href="#references">Midnite Oil Software LLC</a> (2023) and <a href="#references">Devsplorer</a> (2020) 
+                            I was able to create a script that checks the orientation of the die using a combination of Cross- and Dot product.
+                            After the dice was implementented a punisment for not completing the task. The player simply moves backwards half the steps he rolled. 
+
+                        </p>
+
+                        <p class="para mb1">
+                            After the die rolling was done. The main mechanics were completed. 
+                            I then started working on a lobby where players can be added and deleted. <a href="#lobby">See lobby below.</a>
+                            For this I created a PlayerGhost class which acts as the player and it has a refrence for it's pawn on the board.
+                        </p>
+
+                        <p class="para mb1">
+                            I then added a audio system  which currently uses temporary audio clips and modes like Normal and Drinking(K-18) for different usage.
+                            After that it was time to take a deeper dive into the tasks. At this time the game had only timed tasks. 
+                            I added more task types, timed, non-timed and a curse. The tasks can also be directed at different groups of players. 
+                        </p>
+
+                        <p class="para mb1">
+                            During the development process the game was tested after additions and modifications on PC and sometimes on Mobile. 
+                            Now it was time to move to testing with an Android TV. 
+                            Because Android TVs use .APK for apps as does all android devices. It was farely simple to download the build to the TV. 
+                            All that was needed was enabling some tabs in the project's player settings, enabling developer mode on the TV. 
+                            Attaching a laptop to the TV and building to it.
+                        </p>
+
+                        <p class="para mb3">
+                            After testing I discovered The UI navigation didn't work correctly with the TV remote and that the die sometimes couldn't get the number on top. 
+                        </p>
+
+                        <h1 class="subheading mb1">Core mechanics</h1>
+
+                        <h3 class="subheading mb1">Lobby</h3>
+                        <img src="../img/BoardGame/boardgame_lobby.png" alt="an image of the lobby" id="lobby" class="para_img mb1">
+                        <p class="para mb1">
+                            The lobby adds players to the game and deletes them. 
+                            The lobby UI has a space to add all the players, buttons to add and remove players from the lobby. 
+                            Above is a picture of the lobby. The lobby adds a PlayerGhost prefab to the UI. The prefab has input text area for the name, and a dropdown menu for the gender of the player. 
+                            The playerGhost component is then added to PlayerList in GameManager.
+                        </p>
+
+                        <p class="para mb3">
+                            The PlayerGhost has all the players variables. For example Name, ID and the slot number AKA position on the board. 
+                            The PlayerGhost controls it's pawn on the board.
+                        </p>
+
+                        <h3 class="subheading mb1" id="tasks">Tasks</h3>
+                        <p class="para mb3">
+                            The tasks are created with ScriptableObjects.
+                        </p>
+
+                        <h4 class="subheading mb1">Fields</h4>
+
+                        <div class="flex column mb3">
+                            <div class="mb3">
+                                <h5 class="subheading mb1">Task type</h5>
+                                <p class="para mb1">The task type indicates what kind of task it is. There are currently 3 different types. Timed, Non timed and curse.</p>
+                                <p class="para"><strong>Timed</strong> is a task that is done under a time limit.</p>
+                                <p class="para"><strong>Non timed</strong> is a normal task with no time limit.</p>
+                                <p class="para">
+                                    <strong>Curse</strong> 
+                                    is set to the player in turn. 
+                                    A random player is selected and the player with the curse has to do the same solo tasks as the player selected. 
+                                </p>
+                            </div>
+                            <div class="mb3">
+                                <h5 class="subheading mb1">Task allocation</h5>
+                                <p class="para">This indicates who the task is for. Curretly there are Solo, Player to Player, Gender and All. </p>
+                            </div>
+                            <div class="mb3">
+                                <h5 class="subheading">Text / The task it self</h5>
+                            </div>
+                            <div class="mb3">
+                                <h5 class="subheading mb1">Variables</h5>
+                                <p class="para mb1">The are multiple variables for the tasks. A random variable is selected for one slot on the board.</p>
+                                <p class="para">For <strong>timed</strong> tasks the variables are used for the timer and for <strong>curses</strong> it indicates how many rounds it lasts.</p>
+                            </div>
+
+                            <div>
+                                <h5 class="subheading mb1">Board stage</h5>
+                                <p class="para">Indicates where on the board the task can appear for the first time. It is ranged from 1 to 3.</p>
+                            </div>
+                        </div>
+
+                        <p class="para mb3">
+                            When the game is loaded. The tasks are loaded from the resources. Then when the game starts, IDs for the possible tasks are created. 
+                            Going through all the variables to get all possible variations of the tasks. 
+                            When creating the slots on the board the game takes a random task checks the board stage and check the ID if it is already used.
+                        </p>
+
+                        <h3 class="subheading mb1">Die</h3>
+                        <p class="para mb3">
+                           When the die is rolled it applies a random force and torque to it. Then it's orientation is checked with Vectors' cross product and -dot product.
+                        </p>
+                        
+                        <h1 class="subheading mb1">Issues</h1>
+                        
+                         <p class="para mb3">
+                          During testing on TV there was an bug where the die will sometimes give a wrong number. 
+                          This bug hasn't appeared when testing with a PC.
+                        </p>
+                        
+                        <h1 class="subheading mb1">Future</h1>
+                         <p class="para mb3">
+                          Next step in the development is to create the final textures for all models, create new tasks and new task types. 
+                          For example there is a plan to implement a Trivia task type.
+                        </p>
+                        
+                    </div>
+                    <!--The image gallery is created here via a JavaScript script-->
+                    <h1 class="subheading mb1">Gameplay</h1>
+                    <div id="slides-container" class="mb5">
+                    </div>
+
+                    <h1 class="subheading mb1" id ="references">references</h1>
+                    <p class="para mb3">
+                        Cinemachine. 2025. Powering cameras for real-time productions. Features. Unity. WWW-document.
+                        Available at: <a href="https://unity.com/features/cinemachine">https://unity.com/features/cinemachine</a>. [Accessed 28.11.2025].
+                    </p>
+                    <p class="para mb3">
+                        Devsplorer. 2020. Detect Upper Face Of Dice In Unity Using Vector Operations | Unity Tutorial. Youtube. Video.
+                        Available at: <a href="https://www.youtube.com/watch?v=HEUdIavIvlQ&t=465s">https://www.youtube.com/watch?v=HEUdIavIvlQ&t=465s</a>. [Accessed 22.10.2025].
+                    </p>
+                    <p class="para mb3">
+                        Midnite Oil Software LLC. 2023. Unity Tutorial - Creating Rollable Dice. Youtube. Video.
+                        Available at: <a href="https://www.youtube.com/watch?v=VhR6FoQXHX4">https://www.youtube.com/watch?v=VhR6FoQXHX4</a>. [Accessed 22.10.2025].
+                    </p>
+                    
+                    <p id="reference">Icons from <a href="https://fontawesome.com/">Font Awesome</a></p>
+                </section>
+            </div>
+        </div>
+    </body>
+</html>

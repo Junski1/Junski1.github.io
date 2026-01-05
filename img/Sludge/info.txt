@@ -1,1 +1,0 @@
-{"txt": "Mobile multiplayer game made with Unity and C#.;Published to Google Play.;Was working with this project as an intern.;You jump around trying to land on other players.;There are power-ups and downs that can be collected.;My job was to refactor movement to be run on server to prevent cheating and making the power-up system."}

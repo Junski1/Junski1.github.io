@@ -1,0 +1,8 @@
+{
+    "imgs": 
+        [
+            {"src":"Mainmenu.png", "alt": "Home screen"},
+            {"src":"Gameplay.png", "alt": "Gameplay"},
+            {"src":"DeathScreen.png", "alt": "Death screen"}
+	]
+}

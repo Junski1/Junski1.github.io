@@ -1,0 +1,10 @@
+{
+    "imgs": 
+        [
+            {"src":"DuckingOut.jpg", "alt": "Home screen"},
+            {"src":"DuckingOut2.jpg", "alt": "Gameplay"},
+            {"src":"DuckingOut3.jpg", "alt": "Gameplay 2"},
+            {"src":"DuckingOut4.jpg", "alt": "Gameplay 3"},
+            {"src":"https://www.youtube.com/embed/yu2eYUxp4lU?si=IxKgU_rRKsHkpYbj", "alt": "video"}
+	]
+}
