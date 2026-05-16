@@ -34,9 +34,7 @@
                         <hr class="nav-devider mb2">
                         <div class="navbar-nav flex column">
                             <a class="nav-link mb2" href="#PageWrapper">To the top</a>
-                        </div>
-
-                        
+                        </div>  
                     </div>
 
                     <div id="nav-contacts" class="non-mobile flex column">
@@ -62,7 +60,7 @@
                         <h3>Members:</h3> <h3>Oskar Junnola</h3>
                     </div>
                     <div class ="flex mb1">
-                        <h3>Timeframe:</h3> <h3>4 months</h3>
+                        <h3>Timeframe:</h3> <h3>1 month</h3>
                     </div>
                     <div class ="flex">
                         <h3>Role:</h3> <h3>Programmer</h3>
@@ -72,11 +70,23 @@
                     <div>
                         <h1 class="header mb3">Photo Organizer</h1>
                         <h1 class="subheading mb1">Information</h1>
+                        <p class="para mb1">
+                            This WPF project worked as personal practice on async processes in C#. It's objective sort images and videos in a folder based on its metadata.
+                            The application checks the creation date and coordinates of the file if available. The application uses the <a href="https://www.mapbox.com" target="_blank">Mapbox API</a> to find the location of the image. 
+                            Then a folder structure like below is created based on the collected metadata.
+                        </p>
+                        <img src="../img/PhotoOrganizer/PhotoOrganizer_Folder_Structure.png" alt="Created folder structure" class="para_img mb1">
+                        <h2 class="subheading mb1">Files</h2>
+                        <div class="mb1">
+                            <h5 class="subheading mb1">Collected metadata</h5></p>
+                            <strong class="para">Creation date</strong>
+                            <strong class="para">Coordinates</strong>
+                            <strong class="para">Camera manufactorer</strong>
+                            <strong class="para">Camera Model</strong>
+                        </div>
                         <p class="para mb3">
-                            A personal WPF project. Made to sort images and videos in a folder based on its metadata (creation time). 
-                            The program uses parallel and async processes to work faster. 
-                            worked as a presonal practice project on parallel and async processses in C#
-                        </p>    
+                           The application uses TagLib to collect metadata for videos.
+                        </p>
                     </div>
                     <!--The image gallery is created here via a JavaScript script-->
                     <div id="slides-container">
