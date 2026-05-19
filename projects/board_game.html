@@ -1,0 +1,144 @@
+<!doctype html><!-- kerrotaan selaimelle dokumenttityyppi-->
+<html  lang="en"><!--tämän sisällä trakennetaan koko sivu-->
+    <head><!-- tässä kerrotaan selaimelle kakki taustatiedot-->
+        <meta charset="utf-8">
+        <meta name="description" content="A report for a project">
+        <meta name="keywords" content="CV, portfolio, project, report">
+        <meta name="author" content="Oskar Junnola">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="../css/styles.css" rel="stylesheet">
+        <link href="../css/project_styles.css" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+        <script src="../js/ExpandMenu.js"></script>
+        <script src="../js/ModalScripts.js"></script>
+        <title>Board Game</title>
+    </head>
+    <body onload="CheckForMobile(), CreateModal('../img/BoardGame/', 'info.json')">
+        <div id="PageWrapper">
+
+            <nav id="navbar">
+                <div id="navbar-content" class="flex column">
+                    <div id="profile">
+                        <img id="img-profile" class="non-mobile mb1" src="../img/profile.jpg" alt="profile picture">
+                        <h2 id="navname" class="mb1">Oskar Junnola</h2>
+                        <a class="mobile icon" onclick="ExpandMenu()"><i class="fa fa-bars"></i></a>
+                    </div>
+                    <div id="expand">
+                        
+                        <div class="navbar-nav flex column">
+                            <a class="nav-link mb1" href="../index.html">Home</a>
+                            <a class="nav-link mb2" href="../projects.html" title="Go to projects page">Projects</a>
+                        </div>
+                        <hr class="nav-devider mb2">
+                        <div class="navbar-nav flex column">
+                            <a class="nav-link mb2" href="#PageWrapper">To the top</a>
+                        </div>
+
+                    </div>
+
+                    <div id="nav-contacts" class="non-mobile flex column">
+                        <a href="mailto:oskarjunnola@gmail.com">oskarjunnola@gmail.com</a>
+                        <a href="tel:+358443488622">+(358) 44 3488 622</a>
+                        <div class="contact-icons flex flex-center">
+                            <a href="https://www.linkedin.com/in/oskarjunnola" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="https://github.com/Junski1/Git_Portfolio" target="_blank"><i class="fa-brands fa-github"></i></a>
+                            <a href="https://junsk1.itch.io" target="_blank"><i class="fa-brands fa-itch-io"></i></a>
+                        </div> 
+                    </div>
+                </div>
+            </nav>
+            <div id="content">
+                <div id="info-box" class="flex column">
+                    <div class ="flex mb1">
+                        <h3>Name:</h3> <h3>Board game</h3>
+                    </div>
+                    <div class ="flex mb1">
+                        <h3>Type:</h3> <h3>School / Personal project</h3>
+                    </div>
+                    <div class ="flex  mb1">
+                        <h3>Members:</h3> <h3>Oskar Junnola</h3>
+                    </div>
+                    <div class ="flex  mb1">
+                        <h3>Timeframe:</h3> <h3>4 months</h3>
+                    </div>
+                    <div class ="flex">
+                        <h3>Role:</h3> <h3>All</h3>
+                    </div>
+                </div>
+                <section>
+                    <div>
+                        <h1 class="header mb3">Board Game</h1>
+                        <h1 class="subheading mb1">Information</h1>
+                        <p class="para mb3">
+                            This board game is a fun party game to play with friends. 
+                            You race to the end of the board against the other players while completing different tasks. 
+                            The tasks' icludes different allocation. Varying from solo tasks to all players.
+                        </p>
+                        <h1 class="subheading mb1">Roles</h1>
+                        <ul class="mb3">
+                            <li><h3 class="subheading"><a href="https://junski1.github.io/">Oskar Junnola</a>: All</h3></li>
+                        </ul>
+                        <p class="para mb1">
+                            This board game started as an idea of a party game to play with friends when spending time with them. 
+                            Because playing the game might include a large group of people I decided that, playing it from a TV with a big screen would be the best way to achieve a good and fun experience.
+                        </p>
+
+                        <h3 class="subheading m1">Gameplay</h3>
+                        <p class="para mb1">
+                            The game has a lobby where you can add and delete players. (Currently only locally, plans on making this multiplayer)
+                            Each player is assigned a color and a name which can be changed.
+                        </p>
+                         <p class="para mb1">
+                            When the game starts the play order is randomized. The first player rolls a die and moves forward the rolled amount. 
+                            When arriving to a slot, a task card is drawn. The player must complete the given task. If not, the player moves back half the steps they rolled.
+                        </p>
+
+                        <h3 class="subheading mb1" id="tasks">Tasks</h3>
+                        <p class="para mb1">The tasks may include a task to do yourself or to or with others. Random trivia tasks about other players are in development.</p>
+                        <div class="flex column mb3">
+                            <div class="mb3">
+                                <h5 class="subheading mb1">Task type</h5>
+                                <p class="para mb1">The task type indicates what kind of task it is. There are currently 3 different types. Timed, Non timed and curse.</p>
+                                <p class="para"><strong>Timed</strong> is a task that is done under a time limit.</p>
+                                <p class="para"><strong>Non timed</strong> is a normal task with no time limit.</p>
+                                <p class="para">
+                                    <strong>Curse</strong> 
+                                    is set to the player in turn. 
+                                    A random player is selected and the player with the curse has to do the same solo tasks as the player selected. 
+                                </p>
+                            </div>
+                            <div class="mb3">
+                                <h5 class="subheading mb1">Variables</h5>
+                                <p class="para mb1">The are multiple variables for the tasks. A random variable is selected when a card is drawn.</p>
+                                <p class="para">For <strong>timed</strong> tasks the variables are used for the timer and for <strong>curses</strong> it indicates how many rounds it lasts.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--The image gallery is created here via a JavaScript script-->
+                    <h1 class="subheading mb1">Gameplay</h1>
+                    <div id="slides-container" class="mb5">
+                    </div>
+
+                    <h1 class="subheading mb1" id ="references">references</h1>
+                    <p class="para mb3">
+                        Cinemachine. 2025. Powering cameras for real-time productions. Features. Unity. WWW-document.
+                        Available at: <a href="https://unity.com/features/cinemachine">https://unity.com/features/cinemachine</a>. [Accessed 28.11.2025].
+                    </p>
+                    <p class="para mb3">
+                        Devsplorer. 2020. Detect Upper Face Of Dice In Unity Using Vector Operations | Unity Tutorial. Youtube. Video.
+                        Available at: <a href="https://www.youtube.com/watch?v=HEUdIavIvlQ&t=465s">https://www.youtube.com/watch?v=HEUdIavIvlQ&t=465s</a>. [Accessed 22.10.2025].
+                    </p>
+                    <p class="para mb3">
+                        Midnite Oil Software LLC. 2023. Unity Tutorial - Creating Rollable Dice. Youtube. Video.
+                        Available at: <a href="https://www.youtube.com/watch?v=VhR6FoQXHX4">https://www.youtube.com/watch?v=VhR6FoQXHX4</a>. [Accessed 22.10.2025].
+                    </p>
+                    
+                    <p id="reference">Icons from <a href="https://fontawesome.com/">Font Awesome</a></p>
+                </section>
+            </div>
+        </div>
+    </body>
+</html>
